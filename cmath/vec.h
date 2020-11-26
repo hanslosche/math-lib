@@ -49,5 +49,7 @@ vec newVector(unsigned int numArgs, ...);
  * 
  */
 
-#define NUMARGS(...)(sizeof((float[]){0, ##_VA_ARGS__ /sizeof(float -1));
+
+#define vector(...) newVector(NUMARGS(float, __VA_ARGS__), ##__VA_ARGS__)
+
 #endif
