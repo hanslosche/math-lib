@@ -42,7 +42,7 @@ vec constructEmptyVector(unsigned int dim);
  * 
  */
 
-vec newVector(unsigned int numArgs, ...);
+vec newVector(unsigned int dim, ...);
 
 /**
  * 
@@ -51,5 +51,28 @@ vec newVector(unsigned int numArgs, ...);
 
 
 #define vector(...) newVector(NUMARGS(float, __VA_ARGS__), ##__VA_ARGS__)
+
+/**
+ * 
+ * 
+ */
+
+
+vec copy(vec v);
+
+
+/**
+ * 
+ * 
+ */
+
+vec copyPtr(vec *v);
+
+/**
+ * 
+ * 
+ */
+
+void print(vec v);
 
 #endif

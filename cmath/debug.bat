@@ -1,2 +1,2 @@
-gcc -g main.c
+gcc -g main.c vec.c
 gdb a.exe
