@@ -112,3 +112,26 @@ void print(vec v){
 
     printf("]\n");
 }
+
+
+/**
+ * 
+ * 
+ */
+
+bool equals(vec v1, vec v2)
+{
+  if (v1.dim == v2.dim)
+  {
+    for(unsigned int i=0; i < v1.dim; i++)
+    {
+      if (v1.elements[i] != v2.elements[i])
+      {
+        return false;
+      }
+    }
+
+    return true;
+  }
+  return false;
+}

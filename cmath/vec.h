@@ -75,4 +75,12 @@ vec copyPtr(vec *v);
 
 void print(vec v);
 
+/**
+ * 
+ * 
+ */
+
+bool equals(vec v1, vec v2);
+
+
 #endif
