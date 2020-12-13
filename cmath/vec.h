@@ -161,4 +161,11 @@ vec divide(vec v1, vec v2);
 
 vec divideBy(vec *v1, vec v2);
 
+/**
+ * 
+ * 
+ */
+
+float dot(vec v1, vec v2);
+
 #endif

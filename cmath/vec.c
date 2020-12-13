@@ -348,3 +348,27 @@ vec divideBy(vec *v1, vec v2)
     return true;
   }
 }
+
+/**
+ * 
+ * 
+ */
+
+float dot(vec v1, vec v2)
+{
+  float ret = 0.0f;
+
+  if (v1.dim == v2.dim)
+  {
+    for (unsigned int i = 0; i < v1.dim; i++)
+    {
+      ret += v1.elements[i] * v2.elements[i];
+    }
+  }
+  return ret;
+}
+
+/**
+ * 
+ * 
+ */
