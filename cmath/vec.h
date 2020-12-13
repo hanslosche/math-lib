@@ -6,7 +6,6 @@
 #ifndef VEC_H
 #define VEC_H
 
-
 typedef struct 
 {
     unsigned int dim;
@@ -29,7 +28,6 @@ vec allocate(unsigned int dim);
 
 vec constructDefaultVector(unsigned int dim, float val);
 
-
 /**
  * 
  * 
@@ -49,7 +47,6 @@ vec newVector(unsigned int dim, ...);
  * 
  */
 
-
 #define vector(...) newVector(NUMARGS(float, __VA_ARGS__), ##__VA_ARGS__)
 
 /**
@@ -57,9 +54,7 @@ vec newVector(unsigned int dim, ...);
  * 
  */
 
-
 vec copy(vec v);
-
 
 /**
  * 
@@ -137,5 +132,33 @@ vec subtract(vec v1, vec v2);
  */
 
 bool subtractFrom(vec *v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+vec multiply(vec v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+vec multiplyBy(vec *v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+vec divide(vec v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+vec divideBy(vec *v1, vec v2);
 
 #endif

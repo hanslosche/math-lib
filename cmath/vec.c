@@ -214,3 +214,137 @@ vec add(vec v1, vec v2)
   }
   return ret;
 }
+
+/**
+ * 
+ * 
+ */
+
+bool addTo(vec *v1, vec v2)
+{
+  if (v1->dim != v2.dim)
+  {
+    return false;
+  }
+
+  for (unsigned int = 0; i < v1->dim; i++)
+  {
+    v1->elements[i] += v2.elements[i];
+  }
+
+  return true;
+}
+
+/**
+ * 
+ * 
+ */
+
+vec subtract(vec v1, vec v2)
+{
+  if (v1.dim != v2.dim)
+  {
+    return VEC_UNDEFINED;
+  }
+  vec ret = allocate(v1.dim);
+  
+  for(unsigned int i = 0; i < ret.dim; i++){
+    ret.elements[i] = v1.elements[i] - v2.elements[i];
+  }
+  return ret;
+}
+  
+/**
+ * 
+ * 
+ */
+
+bool SubtractFrom(vec *v1, vec v2)
+{
+  if (v1->dim != v2.dim)
+  {
+    return false;
+  }
+
+  for (unsigned int = 0; i < v1->dim; i++)
+  {
+    v1->elements[i] -= v2.elements[i];
+  }
+
+  return true;
+}
+
+/**
+ * 
+ * 
+ */
+ 
+vec multiply(vec v1, vec v2)
+{
+  if (v1.dim != v2.dim)
+  {
+    return VEC_UNDEFINED;
+  }
+
+  vec ret = allocate(v1.dim);
+
+  for (unsigned int i = 0; i < ret.dim; i++)
+  {
+    ret.elements[i] = v1.elements[i] * v2.elements[i];
+  }
+
+  return ret;
+}
+
+/**
+ * 
+ * 
+ */
+
+bool multiplyBy(vec *v1, vec v2)
+{
+  if (v1->dim != v2.dim)
+  {
+    for (unsigned int i = 0; i < v1->dim; i++)
+    {
+      v1->elements[i] *= v2.elements[i];
+    }
+    return true;
+  }
+}
+
+/**
+ * 
+ * 
+ */
+
+vec divide(vec v1, vec v2)
+{
+  if (v1.dim != v2.dim)
+  {
+    return VEC_UNDEFINED;
+  }
+  vec ret = allocate(v1.dim);
+  
+  for(unsigned int i = 0; i < ret.dim; i++){
+    ret.elements[i] = v1.elements[i] / v2.elements[i];
+  }
+  return ret;
+}
+
+/**
+ * 
+ * 
+ */
+
+vec divideBy(vec *v1, vec v2)
+{
+  if (v1->dim != v2.dim)
+  {
+    for (unsigned int i = 0; i < v1->dim; i++)
+    {
+      v1->elements[i] /= v2.elements[i];
+    }
+    return true;
+  }
+}
