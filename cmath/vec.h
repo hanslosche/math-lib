@@ -82,5 +82,60 @@ void print(vec v);
 
 bool equals(vec v1, vec v2);
 
+/**
+ * 
+ * 
+ */
+
+vec scalerMultiplication(vec v, float k);
+
+/**
+ * 
+ * 
+ */
+
+void scalerMultiplicationBy(vec *v, float k);
+
+/**
+ * 
+ * 
+ */
+
+vec scalerDivision(vec v, float k);
+
+/**
+ * 
+ * 
+ */
+
+void scalerDivisionBy(vec *v, float k);
+
+/**
+ * 
+ * 
+ */
+
+vec add(vec v1, vec2);
+
+/**
+ * 
+ * 
+ */
+
+bool addTo(vec *v1, vec vec2);
+
+/**
+ * 
+ * 
+ */
+
+vec subtract(vec v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+bool subtractFrom(vec *v1, vec v2);
 
 #endif

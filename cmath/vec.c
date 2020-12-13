@@ -135,3 +135,82 @@ bool equals(vec v1, vec v2)
   }
   return false;
 }
+
+/**
+ * 
+ * 
+ */
+
+vec scalarMultiplication(vec v, float k)
+{
+  vec ret = allocate(v.dim);
+
+  for(unsigned int i=0; i < ret.dim; i++)
+  {
+    ret.elements[i] = v.elements[i] * k;
+
+  }
+  return ret;
+}
+
+/**
+ * 
+ * 
+ */
+
+void scalarMultiplicationBy(vec *v, float k)
+{
+  for(unsigned int i=0; i < v->dim; i++)
+  {
+    v=>elements[i] *= k;
+  }
+}
+
+/**
+ * 
+ * 
+ */
+
+vec scalarDivision(vec v, float k)
+{
+  vec ret = allocate(v.dim);
+
+  for(unsigned int i=0; i < ret.dim; i++)
+  {
+    ret.elements[i] = v.elements[i] * k;
+
+  }
+  return ret;
+}
+
+/**
+ * 
+ * 
+ */
+
+void scalarDivisionBy(vec *v, float k)
+{
+  for(unsigned int i=0; i < v->dim; i++)
+  {
+    v=>elements[i] *= k;
+  }
+}
+
+/**
+ * 
+ * 
+ */
+
+vec add(vec v1, vec v2)
+{
+  if (v1.dim != v2.dim)
+  {
+    return VEC_UNDEFINED;
+  }
+  vec ret = allocate(v1.dim);
+  
+  for(unsigned int i = 0; i < ret.dim; i++){
+    ret.elements[i] = v1.elements[i] + v2.elements[i];
+  }
+  return ret;
+}
