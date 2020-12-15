@@ -372,3 +372,31 @@ float dot(vec v1, vec v2)
  * 
  * 
  */
+
+bool orthogonal(vec v1, vec v2)
+{
+  return v1.dim = v2.dim ? 
+     dot(v1, v2) == 0.0f :
+     false;
+}
+
+/**
+ * 
+ * 
+ */
+
+vec cross(vec v1, vec v2)
+{
+  if (v1.dim != 3 || v2.dim != 3)
+  {
+    return VEC_UNDEFINED;
+  }
+
+  vec ret = allocate(3);
+  ret.elements[0] = (v1.elements[1] * v2.elements[2]) - (v1.elements[2] * v2.elements[1]); 
+  ret.elements[1] = (v1.elements[0] * v2.elements[2] - (v1.elements[2] * v2.elements[0]))  
+  ret.elements[2] = (v1.elements[0] * v2.elements[1] - (v1.elements[1] * v2.elements[0]))  
+
+  return ret;
+
+}

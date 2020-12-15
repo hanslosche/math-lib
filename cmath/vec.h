@@ -168,4 +168,22 @@ vec divideBy(vec *v1, vec v2);
 
 float dot(vec v1, vec v2);
 
+/**
+ * 
+ * 
+ */
+float orthogonal(vec v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
+vec cross(vec v1, vec v2);
+
+/**
+ * 
+ * 
+ */
+
 #endif
