@@ -76,24 +76,31 @@ bool equals(vec v1, vec v2);
  * 
  */
 
-vec scalerMultiplication(vec v, float k);
-void scalerMultiplicationBy(vec *v, float k);
+vec scalarMultiplication(vec v, float k);
+void scalarMultiplicationBy(vec *v, float k);
 
 /**
  * 
  * 
  */
 
-vec scalerDivision(vec v, float k);
-void scalerDivisionBy(vec *v, float k);
+vec scalarDivision(vec v, float k);
+void scalarDivisionBy(vec *v, float k);
 
 /**
  * 
  * 
  */
 
-vec add(vec v1, vec2);
-bool addTo(vec *v1, vec vec2);
+vec power(vec v, float k);
+void powerOf(vec *v, float k);
+
+/**
+ * 
+ * 
+ */
+vec add(vec v1, vec v2);
+bool addTo(vec *v1, vec v2);
 
 /**
  * 
@@ -109,7 +116,7 @@ bool subtractFrom(vec *v1, vec v2);
  */
 
 vec multiply(vec v1, vec v2);
-vec multiplyBy(vec *v1, vec v2);
+bool multiplyBy(vec *v1, vec v2);
 
 /**
  * 
@@ -117,7 +124,7 @@ vec multiplyBy(vec *v1, vec v2);
  */
 
 vec divide(vec v1, vec v2);
-vec divideBy(vec *v1, vec v2);
+bool divideBy(vec *v1, vec v2);
 
 /**
  * 
@@ -130,7 +137,7 @@ float dot(vec v1, vec v2);
  * 
  * 
  */
-float orthogonal(vec v1, vec v2);
+bool orthogonal(vec v1, vec v2);
 
 /**
  * 
@@ -153,7 +160,7 @@ float magnitudeSquared(vec v);
  */
 
 vec noralized(vec v);
-vec normalize(vec *v);
+void normalize(vec *v);
 
 
 #endif

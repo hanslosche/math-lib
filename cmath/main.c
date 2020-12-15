@@ -7,13 +7,14 @@ int main(){
 
     printf("Hello, World!\n");
     
-    vec v1 = constructDefaultVector(5, 6.9f);
+    vec v1 = vector(1.0f, 2.0f, -3.0f);
     print(v1);
 
-    vec v2 = constructDefaultVector(6, 6.9f);
+    vec v2 = scalarMultiplication(v1, 3.0f);
     print(v2);
 
-    printf("%d\n", equals(v1, v2));
+    scalarMultiplicationBy(&v1, 3.0f);
+    print(v1);
 
     return 0;
 }
