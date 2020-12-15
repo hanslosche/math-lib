@@ -186,4 +186,14 @@ vec cross(vec v1, vec v2);
  * 
  */
 
+float magnitude(vec v);
+
+/**
+ * 
+ * 
+ */
+
+float magnitudeSquared(vec v);
+
+
 #endif

@@ -400,3 +400,30 @@ vec cross(vec v1, vec v2)
   return ret;
 
 }
+
+/**
+ * 
+ * 
+ */
+
+float magnitude(vec v)
+{
+  return sqrt(magnitudeSquared(v));
+}
+
+/**
+ * 
+ * 
+ */
+
+float magnitudeSquared(vec v)
+{
+  float ret = 0.0f;
+  
+  for(unsigned int i = 0; i < v.dim; i++)
+  {
+    ret += v.elements[i] * v.elements[i];
+  }
+
+  return ret;
+}
