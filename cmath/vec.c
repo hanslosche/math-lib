@@ -332,10 +332,6 @@ vec divide(vec v1, vec v2)
   return ret;
 }
 
-/**
- * 
- * 
- */
 
 vec divideBy(vec *v1, vec v2)
 {
@@ -411,10 +407,6 @@ float magnitude(vec v)
   return sqrt(magnitudeSquared(v));
 }
 
-/**
- * 
- * 
- */
 
 float magnitudeSquared(vec v)
 {
@@ -427,3 +419,33 @@ float magnitudeSquared(vec v)
 
   return ret;
 }
+
+/**
+ * 
+ * 
+ */
+
+vec normalized(vec v)
+{
+  vec ret = allocate(v.dim);
+  float mag = magnitude(v);
+
+  for(unsigned int i = 0; i < ret.dim; i++)
+  {
+    ret.elements[i] /= mag;
+  }
+}
+
+void normalize(vec *v)
+{
+  float mag = magnitude(*v);
+
+  for(unsigned int i = 0; i < v->dim; i++)
+  {
+    v->elements[i] /= mag;
+  }
+}
+/**
+ * 
+ * 
+ */

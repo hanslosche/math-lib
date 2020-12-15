@@ -55,12 +55,6 @@ vec newVector(unsigned int dim, ...);
  */
 
 vec copy(vec v);
-
-/**
- * 
- * 
- */
-
 vec copyPtr(vec *v);
 
 /**
@@ -83,12 +77,6 @@ bool equals(vec v1, vec v2);
  */
 
 vec scalerMultiplication(vec v, float k);
-
-/**
- * 
- * 
- */
-
 void scalerMultiplicationBy(vec *v, float k);
 
 /**
@@ -97,12 +85,6 @@ void scalerMultiplicationBy(vec *v, float k);
  */
 
 vec scalerDivision(vec v, float k);
-
-/**
- * 
- * 
- */
-
 void scalerDivisionBy(vec *v, float k);
 
 /**
@@ -111,12 +93,6 @@ void scalerDivisionBy(vec *v, float k);
  */
 
 vec add(vec v1, vec2);
-
-/**
- * 
- * 
- */
-
 bool addTo(vec *v1, vec vec2);
 
 /**
@@ -125,12 +101,6 @@ bool addTo(vec *v1, vec vec2);
  */
 
 vec subtract(vec v1, vec v2);
-
-/**
- * 
- * 
- */
-
 bool subtractFrom(vec *v1, vec v2);
 
 /**
@@ -139,12 +109,6 @@ bool subtractFrom(vec *v1, vec v2);
  */
 
 vec multiply(vec v1, vec v2);
-
-/**
- * 
- * 
- */
-
 vec multiplyBy(vec *v1, vec v2);
 
 /**
@@ -153,12 +117,6 @@ vec multiplyBy(vec *v1, vec v2);
  */
 
 vec divide(vec v1, vec v2);
-
-/**
- * 
- * 
- */
-
 vec divideBy(vec *v1, vec v2);
 
 /**
@@ -187,13 +145,15 @@ vec cross(vec v1, vec v2);
  */
 
 float magnitude(vec v);
+float magnitudeSquared(vec v);
 
 /**
  * 
  * 
  */
 
-float magnitudeSquared(vec v);
+vec noralized(vec v);
+vec normalize(vec *v);
 
 
 #endif
