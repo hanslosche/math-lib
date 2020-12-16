@@ -10,10 +10,10 @@ int main(){
     vec v1 = vector(1.0f, 2.0f, -3.0f);
     print(v1);
 
-    vec v2 = scalarMultiplication(v1, 3.0f);
+    vec v2 = scalarDivision(v1, 3.0f);
     print(v2);
 
-    scalarMultiplicationBy(&v1, 3.0f);
+    scalarDivisionBy(&v1, 3.0f);
     print(v1);
 
     return 0;
