@@ -10,10 +10,13 @@ int main(){
     vec v1 = vector(1.0f, 2.0f, -3.0f);
     print(v1);
 
-    vec v2 = power(v1, 3.0f);
+    vec v2 = vector(2.0f, 3.0f, -4.0f);
     print(v2);
 
-    powerOf(&v1, 3.0f);
+    vec v3 = divide(v1, v2);
+    print(v3);
+
+    divideBy(&v1, v2);
     print(v1);
 
     return 0;

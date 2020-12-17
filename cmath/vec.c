@@ -270,7 +270,7 @@ vec subtract(vec v1, vec v2)
  * 
  */
 
-bool SubtractFrom(vec *v1, vec v2)
+bool subtractFrom(vec *v1, vec v2)
 {
   if (v1->dim != v2.dim)
   {
@@ -316,12 +316,15 @@ bool multiplyBy(vec *v1, vec v2)
 {
   if (v1->dim != v2.dim)
   {
-    for (unsigned int i = 0; i < v1->dim; i++)
-    {
-      v1->elements[i] *= v2.elements[i];
-    }
-    return true;
+    return false;
   }
+
+  for(unsigned int i=0; i < v1->dim; i++)
+  {
+    v1->elements[i] *= v2.elements[i];
+  }
+
+  return true;
 }
 
 /**
@@ -348,12 +351,15 @@ bool divideBy(vec *v1, vec v2)
 {
   if (v1->dim != v2.dim)
   {
-    for (unsigned int i = 0; i < v1->dim; i++)
-    {
-      v1->elements[i] /= v2.elements[i];
-    }
-    return true;
+    return false;
   }
+
+  for(unsigned int i=0; i < v1->dim; i++)
+  {
+    v1->elements[i] /= v2.elements[i];
+  }
+
+  return true;
 }
 
 /**
