@@ -19,7 +19,7 @@ extern const vec VEC_UNDEFINED;
  * 
  */
 
-vec allocate(unsigned int dim);
+vec allocateVec(unsigned int dim);
 
 /**
  * 

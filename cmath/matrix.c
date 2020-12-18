@@ -6,7 +6,7 @@
 
 const mat MAT_UNDEFINED = {0, 0, NULL};
 
-mat allocate(unsigned int rows, unsigned int cols)
+mat allocateMat(unsigned int rows, unsigned int cols)
 {
   mat ret;
 
@@ -23,7 +23,7 @@ mat allocate(unsigned int rows, unsigned int cols)
 mat identity(unsigned int dim)
 {
 
-  mat ret = allocate(dim, dim);
+  mat ret = allocateMat(dim, dim);
   for (unsigned int r = 0; r < dim; r++)
   {
     for (unsigned int c = 0; c < dim; c++)
@@ -39,7 +39,7 @@ mat identity(unsigned int dim)
 mat zeroMatrix(unsigned int rows, unsigned int cols)
 {
 
-  mat ret = allocate(dim, dim);
+  mat ret = allocateMat(dim, dim);
   for (unsigned int r = 0; r < dim; r++)
   {
     for (unsigned int c = 0; c < dim; c++)
@@ -53,7 +53,7 @@ mat zeroMatrix(unsigned int rows, unsigned int cols)
 
 mat newMatrix(unsigned int row, unsigned int cols, ...)
 {
-  mat ret = allocate(rows, cols);
+  mat ret = allocateMat(rows, cols);
 
   va_list;
   va_start(list, rows * cols);

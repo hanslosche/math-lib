@@ -3,18 +3,18 @@
 #include <string.h>
 #include <math.h>
 
-const vec VEC_UNDEFINED = {0, NULL};
+const vec VEC_UNDEFINED = {0, NULL}; // undefined vector (no dimension)
 
 /**
  * 
  * 
  */
 
-vec allocate(unsigned int dim)
+vec allocateVec(unsigned int dim)
 {
     vec ret;
 
-    ret.dim = dim;
+    ret.dim = allocateVec(dim);
     ret.elements = malloc(dim * sizeof(float));
 
     return ret;
@@ -27,7 +27,7 @@ vec allocate(unsigned int dim)
 
 vec constructDefaultVector(unsigned int dim, float val)
 {
-    vec ret = allocate(dim);
+    vec ret = allocateVec(dim);
 
     for(unsigned int i=0; i< dim; i++){
         ret.elements[i] = val;
@@ -54,7 +54,7 @@ vec constructEmptyVector(unsigned int dim)
 
 vec newVector(unsigned int dim, ...)
 {
-    vec ret = allocate(dim);
+    vec ret = allocateVec(dim);
 
     va_list list;
     va_start(list, dim);
@@ -86,7 +86,7 @@ vec copy(vec v)
 vec copyPtr(vec *v)
 {
 
-    vec ret;
+    vec ret = allocateVec(v->dim);
     memcpy(&ret, v, sizeof(vec));
     return ret;
 }
@@ -142,7 +142,7 @@ bool equals(vec v1, vec v2)
 
 vec scalarMultiplication(vec v, float k)
 {
-  vec ret = allocate(v.dim);
+  vec ret = allocateVec(v.dim);
 
   for(unsigned int i=0; i < ret.dim; i++)
   {
@@ -168,7 +168,7 @@ void scalarMultiplicationBy(vec *v, float k)
 
 vec scalarDivision(vec v, float k)
 {
-  vec ret = allocate(v.dim);
+  vec ret = allocateVec(v.dim);
 
   for(unsigned int i=0; i < ret.dim; i++)
   {
@@ -194,7 +194,7 @@ void scalarDivisionBy(vec *v, float k)
 
 vec power(vec v, float k)
 {
-  vec ret = allocate(v.dim);
+  vec ret = allocateVec(v.dim);
   
   for(unsigned int i = 0; i < ret.dim; i++)
   {
@@ -222,7 +222,7 @@ vec add(vec v1, vec v2)
   {
     return VEC_UNDEFINED;
   }
-  vec ret = allocate(v1.dim);
+  vec ret = allocateVec(v1.dim);
   
   for(unsigned int i = 0; i < ret.dim; i++){
     ret.elements[i] = v1.elements[i] + v2.elements[i];
@@ -257,7 +257,7 @@ vec subtract(vec v1, vec v2)
   {
     return VEC_UNDEFINED;
   }
-  vec ret = allocate(v1.dim);
+  vec ret = allocateVec(v1.dim);
   
   for(unsigned int i = 0; i < ret.dim; i++){
     ret.elements[i] = v1.elements[i] - v2.elements[i];
@@ -297,7 +297,7 @@ vec multiply(vec v1, vec v2)
     return VEC_UNDEFINED;
   }
 
-  vec ret = allocate(v1.dim);
+  vec ret = allocateVec(v1.dim);
 
   for (unsigned int i = 0; i < ret.dim; i++)
   {
@@ -338,7 +338,7 @@ vec divide(vec v1, vec v2)
   {
     return VEC_UNDEFINED;
   }
-  vec ret = allocate(v1.dim);
+  vec ret = allocateVec(v1.dim);
   
   for(unsigned int i = 0; i < ret.dim; i++){
     ret.elements[i] = v1.elements[i] / v2.elements[i];
@@ -403,7 +403,7 @@ vec cross(vec v1, vec v2)
     return VEC_UNDEFINED;
   }
 
-  vec ret = allocate(3);
+  vec ret = (3);
   ret.elements[0] = (v1.elements[1] * v2.elements[2]) - (v1.elements[2] * v2.elements[1]); 
   ret.elements[1] = (v1.elements[0] * v2.elements[2] - (v1.elements[2] * v2.elements[0]));  
   ret.elements[2] = (v1.elements[0] * v2.elements[1] - (v1.elements[1] * v2.elements[0])); 
@@ -442,7 +442,7 @@ float magnitudeSquared(vec v)
 
 vec normalized(vec v)
 {
-  vec ret = allocate(v.dim);
+  vec ret = allocateVec(v.dim);
   float mag = magnitude(v);
 
   for(unsigned int i = 0; i < ret.dim; i++)
