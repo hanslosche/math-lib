@@ -1,1 +1,2 @@
-gcc main.c vec.c
+gcc -g main.c vec.c
+a.exe
