@@ -82,7 +82,16 @@ void printMat(mat m )
     printf("\n");
 
     printf("|");
+
+    for (unsigned int c = 0; c < m.cols; c++)
+    {
+      printf("%f", m.elements[r][c]);
+    }
+
+    printf("|");
   }
+
+  printf("\n");
 }
 
 

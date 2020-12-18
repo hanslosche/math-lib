@@ -62,7 +62,7 @@ vec copyPtr(vec *v);
  * 
  */
 
-void print(vec v);
+void printVec(vec v);
 
 /**
  * 

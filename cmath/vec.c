@@ -96,7 +96,7 @@ vec copyPtr(vec *v)
  * 
  */
 
-void print(vec v){
+void printVec(vec v){
     printf("[");
 
     for(unsigned int i=0; i< v.dim; i++){

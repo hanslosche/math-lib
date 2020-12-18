@@ -16,7 +16,7 @@ typedef struct
 extern const mat MAT_UNDEFEFINED;
 
 mat allocate(unsigned int rows, unsigned int cols);
-mat indetity(unsigned int dim);
+mat identity(unsigned int dim);
 mat zeroMatrix(unsigned int rows, unsigned int cols);
 mat newMatrix(unsigned int row, unsigned int cols, ...);
 
