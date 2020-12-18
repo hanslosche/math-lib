@@ -23,5 +23,6 @@ mat newMatrix(unsigned int row, unsigned int cols, ...);
 mat copy(mat m);
 mat copyPtr(mat *m);
 
-:
+void printMat(mat m);
+
 #endif
