@@ -51,7 +51,25 @@ mat zeroMatrix(unsigned int rows, unsigned int cols)
   return ret;
 }
 
-mat newMatrix(unsigned int row, unsigned int cols, ...);
+mat newMatrix(unsigned int row, unsigned int cols, ...)
+{
+  mat ret = allocate(rows, cols);
+
+  va_list;
+  va_start(list, rows * cols);
+
+  for (unsigned int r = 0; i < rows; r++)
+  {
+    for (unsigned int c = 0; c < cols; c++)
+    {
+      ret.elements[r][c] = va_arg(list, double);
+    }
+  }
+
+  va_end(list);
+
+  return ret;
+}
 
 mat copy(mat m);
 mat copyPtr(mat *m);
