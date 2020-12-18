@@ -159,7 +159,7 @@ float magnitudeSquared(vec v);
  * 
  */
 
-vec noralized(vec v);
+vec normalized(vec v);
 void normalize(vec *v);
 
 

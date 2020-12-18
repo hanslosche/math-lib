@@ -447,8 +447,10 @@ vec normalized(vec v)
 
   for(unsigned int i = 0; i < ret.dim; i++)
   {
-    ret.elements[i] /= mag;
+    ret.elements[i] = v.elements[i] / mag;
   }
+
+  return ret;
 }
 
 void normalize(vec *v)
